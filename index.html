@@ -174,8 +174,6 @@
                 let data = {
                     token: param_token,
                     channel: param_channel,
-                    username: user_name,
-                    icon_url: icon_url,
                     text: message,
                     reply_broadcast: reply_broadcast,
                     thread_ts: param_thread_ts,
@@ -183,7 +181,7 @@
 
                 // console.log(data)
                 $.ajax({
-                    type: 'GET',
+                    type: 'POST',
                     url: url,
                     data: data,
                 }).then(

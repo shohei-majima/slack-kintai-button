@@ -18,12 +18,18 @@ Button to report attendance to slack
 - Change parameters in `config.js` as described in the comments.
   - *Highly Recommend* : First, test on your personal test channel. 
 
-Details
+## Slack App Setup
 
-- Get `Bot API Token` from Slack.
-  - Open https://slack.com/apps/A0F7YS25R-bots
-  - push "Add to Slack" button
-  - copy `API Token`
+1. Go to [Slack API](https://api.slack.com/apps) and click "Create New App"
+2. Choose "From scratch" and set up app name and workspace
+3. In the "OAuth & Permissions" section, add the following scopes:
+   - `chat:write`
+   - `chat:write.public`
+4. Click "Install to Workspace" to install the app
+5. Copy the displayed "Bot User OAuth Token" (starting with `xoxb-`)
+6. Set this token in your `config.js` file in the `target_list`
+
+## Getting Thread IDs
 
 - Get thread_ts from message.
   - <img src="images/thread_ts_1.png" width="300">
